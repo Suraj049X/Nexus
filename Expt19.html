@@ -1,0 +1,403 @@
+<html>
+
+<head>
+    <title>Expt 19</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .img {
+            width: 100px;
+            height: 100px;
+            margin: 20px 90px;
+        }
+
+        p {
+            font-size: 23px;
+        }
+
+        .main {
+            border: 1px solid black;
+            width: 80%;
+            margin: auto;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+            
+        }
+
+        td {
+            padding: 0.5%;
+            text-align: center;
+        }
+
+        .day{
+            font-weight: bold;
+        }
+
+        .pr {
+            text-align: center;
+        }
+
+        .pr {
+            text-align: left;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin: 2%;
+            gap: 25%;
+        }
+
+        .footer table {
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="heading">
+            <div class="element">
+                <img src="data:image/jpeg;base64,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" class="img">
+            </div>
+
+            <div class="element">
+                <p> Computer Technology Department<br>
+                    TIME -TABLE with effect from 01/01/2026<br>
+                    CM2K (FIRST YEAR)
+                </p>
+            </div>
+            <div class="element">
+                <img src="https://media.licdn.com/dms/image/v2/C4E0BAQHabaTrrajEmw/company-logo_200_200/company-logo_200_200/0/1630639654780?e=2147483647&v=beta&t=NJH4Wycxrkm7CfrGvGbrhKUd-fQbjBZwibf8KarsEog"
+                    class="img">
+            </div>
+        </div>
+
+        <table>
+            <tr>
+                <th>DAY</th>
+                <th>10.00-11.00</th>
+                <th>11.00-12.00</th>
+                <th>12.00-1.00</th>
+                <th rowspan="7">
+                    L<br>
+                    U<br>
+                    N<br>
+                    C<br>
+                    H<br><br>
+                    1.00 To 1.30<br><br>
+                    B<br>
+                    R<br>
+                    E<br>
+                    A<br>
+                    K<br>
+                </th>
+                <th>1.30-2.30</th>
+                <th>2.30-3.30</th>
+                <th rowspan="7">
+                    S<br>
+                    H<br>
+                    O<br>
+                    R<br>
+                    T<br><br>
+                    1.00 To 1.30<br><br>
+                    B<br>
+                    R<br>
+                    E<br>
+                    A<br>
+                    K<br>
+                </th>
+                <th>3.45-4.45</th>
+                <th>4.45-5.45</th>
+            </tr>
+
+            <tr>
+                <td class="day">MON</td>
+                <td colspan="2" class="pr">
+                    B1-<br>
+                    B2-PIC (CET) (RYG)<br>
+                    B3-BEE (E2) (V4)<br>
+                    B4-BEE (E2) (V5)<br>
+                    B5-WPD (CET) (V1)
+                </td>
+
+                <td>BEE (E2)</td>
+
+                <td colspan="2" class="pr">
+                    B1-PIC (CET) (RYG) <br>
+                    B2-BEE (E1) (V6)<br>
+                    B3-PCO (LANUGUAGE)<br>
+                    B4-<br>
+                    B5-WPD (CET) (V1)
+                </td>
+
+                <td>
+                    BLP<br>
+                    (12)<br>
+                    (V2)
+                </td>
+
+                <td>
+                    BLP<br>
+                    (12)<br>
+                    (V2)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day">TUE</td>
+                <td>
+                    BEE (E1)<br>
+                    (12)<br>
+                    (VL)<br>
+                </td>
+
+                <td>
+                    PIC <br>
+                    (12)<br>
+                    (RYG)<br>
+                </td>
+
+                <td>
+                    BEE (E1)<br>
+                    (12)<br>
+                    (VL)<br>
+                </td>
+                <td colspan="2" class="pr">
+                    B1- WPD (M2) (V1)<br>
+                    B2-<br>
+                    B3- BEE (E1) (V6)<br>
+                    B4- PCO (Language)<br>
+                    B5-
+                </td>
+
+                <td colspan="2" class="pr">
+                    B1- BEE (E1) (V6)<br>
+                    B2- WPD (M1) (V1)<br>
+                    B3- PIC (CET) (RYG)<br>
+                    B4- BLP (LL) (RVM)<br>
+                    B5- PIC (CET) (V3)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day">WED</td>
+                <td>
+                    AMS <br>
+                    (12)<br>
+                    (GPB)<br>
+                </td>
+
+                <td>
+                    AMS <br>
+                    (12)<br>
+                    (GPB)<br>
+                </td>
+
+                <td>
+                    PIC<br>
+                    (12)<br>
+                    (VL)<br>
+                </td>
+                <td colspan="2" class="pr">
+                    B1- BLP (LL) (V2)<BR>
+                    B2- PCO (Language)<br>
+                    B3- WPD (M2) (V1)<br>
+                    B4- PIC (CET) (V3)<br>
+                    B5- BEE (E1) (V6)
+                </td>
+
+                <td colspan="2" class="pr">
+                    B1- PIC (CET) (RYG)<br>
+                    B2- BEE (E2) (V4)<br>
+                    B3- BLP (LL) (V2)<br>
+                    B4- WPD (APL) (V1)<br>
+                    B5- PIC (CET) (V3)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day">THU</td>
+                <td>
+                    AMS <br>
+                    (12)<br>
+                    (GPB)<br>
+                </td>
+
+                <td>
+                    AMS <br>
+                    (12)<br>
+                    (GPB)<br>
+                </td>
+
+                <td>
+                    WPD<br>
+                    (12)<br>
+                    (AKM)<br>
+                </td>
+                <td colspan="2" class="pr">
+                    B1- PCO (Language)<BR>
+                    B2- BLP (LL) (V2)<br>
+                    B3- WPD (CET) (V1)<br>
+                    B4- BEE (E1) (V6)<br>
+                    B5- BEE (E2) (V5)
+                </td>
+
+                <td>
+                    BEE (E1)<br>
+                    (15)<br>
+                    (VL)<br>
+                </td>
+
+                <td>
+                    AMS (TU)<br>
+                    (15)<br>
+                    (GPB)<br>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day">FRI</td>
+                <td colspan="2" class="pr">
+                    B1- WPD (M2) (V1)<br>
+                    B2- PIC (CET) (RYG)<br>
+                    B3-<br>
+                    B4- PIC (CET) (V3)<br>
+                    B5- BLP (LL) (V2)
+                </td>
+
+                <td>
+                    WPD<br>
+                    (12)<br>
+                    (AKM)<br>
+                </td>
+
+                <td>
+                    PIC<br>
+                    (12)<br>
+                    (VL)<br>
+                </td>
+
+
+                <td>
+                    PIC<br>
+                    (12)<br>
+                    (VL)<br>
+                </td>
+
+                <td colspan="2 " class="pr">
+                    B1- BEE (E2) (V4)<br>
+                    B2-<br>
+                    B3- PIC (CET) (RYG)<br>
+                    B4- WPD (M2) (V1)<br>
+                    B5- PCO (Language) (SMB)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day">SAT</td>
+                <td>
+
+                </td>
+
+                <td colspan="2">
+                    B2 -WPD(APL) (V1)
+                </td>
+
+                <td colspan="2">
+                    B2 -WPD(APL) (V1)
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <table>
+                <tr>
+                    <td>APL</td>
+                    <td>APL LAB</td>
+                </tr>
+
+                <tr>
+                    <td>PL</td>
+                    <td>PL LAB</td>
+                </tr>
+
+                <tr>
+                    <td>BPL</td>
+                    <td>BPL LAB</td>
+                </tr>
+
+                <tr>
+                    <td>LL</td>
+                    <td>LINUX LAB</td>
+                </tr>
+
+                <tr>
+                    <td>OS</td>
+                    <td>OS LAB</td>
+                </tr>
+
+                <tr>
+                    <td>M1</td>
+                    <td>MSBTE LAB 1</td>
+                </tr>
+
+                <tr>
+                    <td>M2</td>
+                    <td>MSBTE LAB 2</td>
+                </tr>
+
+                <tr>
+                    <td>E1</td>
+                    <td>ELECTRONICS LAB</td>
+                </tr>
+
+                <tr>
+                    <td>E2</td>
+                    <td>ELECTRICAL LAB</td>
+                </tr>
+
+            </table>
+
+            <table>
+                <tr>
+                    <td>BATCH 1 -ROLL NO.01 -21
+                </tr>
+
+                <tr>
+                    <td>BATCH 2 -ROLL NO.21 -42
+                </tr>
+
+                <tr>
+                    <td>BATCH 3 -ROLL NO.43 -63
+                </tr>
+
+                <tr>
+                    <td>BATCH 4 -ROLL NO.64 -84
+                </tr>
+
+                <tr>
+                    <td>BATCH 5-ROLL NO.85-104
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

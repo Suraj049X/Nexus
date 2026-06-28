@@ -1,0 +1,266 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 15</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Bonheur+Royale&family=Bungee&family=Felipa&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
+
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        body {
+            background-image: url('https://img.freepik.com/free-photo/vibrant-liquid-wavy-background-3d-illustration-abstract-iridescent-fluid-render-neon-holographic-smooth-surface-with-colorful-interference-stylish-spectrum-flow-motion_1217-2505.jpg?semt=ais_rp_progressive&w=740&q=80');
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        .heading {
+            border: 2px solid white;
+            width: 100%;
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            color: white;
+            font-family: 'Forte';
+
+        }
+
+        h2 {
+            font-size: 3vw;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3vw;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 10px #fff;
+                
+            word-spacing: 5px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4rem;
+            margin: 20px 1em;
+            padding: 3vw;
+        }
+
+        .images1,
+        .images2,
+        .images3,
+        .images4 {
+            background-color: #fff;
+            width: 10vw;      
+            padding: 10px;
+            position: relative;
+            max-width: 300px;
+            min-width: 220px;
+            transform: rotate(45deg);
+            margin: 18px auto;
+            border-radius: 20px;
+            transition: all 0.5s ease;
+        }
+
+        .img {
+            display: block;
+            transform: rotate(-45deg);
+            height: 150px;
+            width: 150px;
+            margin: 20px 40px;
+            padding: 0.7px;
+            border: 2px solid #fff;
+            margin-top: 70px;
+            z-index: 999;
+            border-radius: 0px 15px 0px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .img :hover {
+          transform: scale(1.1);
+           
+        }
+
+        .images1 {
+            background: linear-gradient(#3DB1E3, #000);
+            color: white;
+            box-shadow: 20px 20px 20px #3DB1E3,
+                -10px -10px 20px #3db1e3a9;
+        }
+
+        .images2 {
+            background: linear-gradient(#014063, #000);
+            color: white;
+            box-shadow: 20px 20px 20px #014063,
+                -10px -10px 20px #014063a9;
+        }
+
+        .images3 {
+            background: linear-gradient(#D9280C, #140202);
+            color: white;
+            box-shadow: 20px 20px 20px #D9280C,
+                -10px -10px 20px #D9280Ca9;
+        }
+
+        .images4 {
+            background: linear-gradient(#CB0000, #000);
+            color: white;
+            box-shadow: 20px 20px 20px #b40101,
+                -10px -10px 20px #CB0000a9;
+        }
+
+
+        p {
+            transform: rotate(-45deg);
+            margin-bottom: 2px;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .aud {
+            display: block;
+            margin-bottom: 80px;
+        }
+
+        audio {
+            width: 70%;
+            transform: rotate(-45);
+            margin-left: 50px;
+            margin: 1em;
+        }
+
+        h3 {
+            margin: 20px;
+            font-size: 25px;
+        }
+
+        .images1:hover {
+            color: aqua;
+            background: linear-gradient(transparent, #000);
+            display: block;
+            box-shadow: 20px 20px 20px #fff,
+                -10px -10px 20px #3db1e3a9;
+            transform: rotate(45deg) scale(1.1);
+        }
+
+        .images2:hover {
+            color: #3ba3db;
+            background: linear-gradient(transparent, #000);
+            display: block;
+            box-shadow: 20px 20px 20px #fff,
+                -10px -10px 20px #106a9b;
+            transform: rotate(45deg) scale(1.1);
+        }
+
+        .images3:hover {
+            color: #D9280C;
+            background: linear-gradient(transparent, #000);
+            display: block;
+            box-shadow: 20px 20px 20px #fff,
+                -10px -10px 20px #D9280Ca9;
+            transform: rotate(45deg) scale(1.1);
+        }
+
+        .images4:hover {
+            color: #CB0000;
+            background: linear-gradient(transparent, #000);
+            display: block;
+            box-shadow: 20px 20px 20px #fff,
+                -10px -10px 20px #CB0000a9;
+            transform: rotate(45deg) scale(1.1);
+        }
+
+        .footer h3{
+            color: white;
+           margin-top: 30px;
+            font-size: 25px;
+            word-spacing: 5px;
+            font-family: 'Unbounded', sans-serif;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>Experiment 15</h1>
+    <hr>
+    <div class="heading"></div>
+    <div class="content">
+        <div class="main">
+            <div class="text">
+                <h2>Most Streamed Songs on Spotify</h2>
+            </div>
+            <div class="gallery">
+                <div class="images3">
+                    <p>5.28 B<br>Blinding Nights<br></p>
+                    <a href="https://share.google/sS7ZtWZNKKfe47xtg">
+                    <img src="https://wallpapercave.com/wp/wp5993904.jpg" class="img">
+                    </a>
+                    <audio controls>
+                        <source src="blinding_lights.mp3" class="aud">
+                    </audio>
+                    <h3>-CANADA</h3>
+                </div>
+
+
+                <div class="images2">
+                    <p>3.4 B<br>Die with a smile<br></p>
+                    <a href="https://share.google/0fKgeqosGXgbvrT6K">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKBrYLMM3MCWQUJxW7plcmGoAljNZCaT8Htg&s"
+                        class="img">
+                        </a>
+                    <audio controls>
+                        <source src="DWAS.mp3" class="aud">
+                    </audio>
+                    <h3>-USA</h3>
+                </div>
+
+                <div class="images1">
+                    <p>4.88 B<br>Shape of You<br></p>
+                    <a href="https://share.google/cNWmNQC5ybQvABeKW">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/b/b4/Shape_Of_You_%28Official_Single_Cover%29_by_Ed_Sheeran.png"
+                        class="img">
+                        </a>
+                    <audio controls>
+                        <source src="shapeofu.mp3" class="aud">
+                    </audio>
+                    <h3>-UK</h3>
+                </div>
+
+
+
+                <div class="images4">
+                    <p>500 M<br>Sahiba<br></p>
+                    <a href="https://share.google/7I1W8bbgBWzQWrl9j">
+                    <img src="https://i.scdn.co/image/ab67616d0000b2730a47bbe7141fdfe0eb2cdba7" class="img">
+                </a>
+                    <audio controls>
+                        <source src="Sahiba.mp3" class="aud">
+                    </audio>
+                    <h3>-INDIA</h3>
+                </div>
+            </div>
+
+            <div class="footer">
+            <h3 style="color: white;">A collection of globally loved tracks that define the power of modern music streaming.</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

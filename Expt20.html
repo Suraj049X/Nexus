@@ -1,0 +1,60 @@
+<html lang>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 20</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+
+    .content{
+        display:flex;
+    }
+
+    .left{
+        width: 40%;
+        height: auto; 
+        border: 2px solid cadetblue;
+    }
+
+    .post{
+        width: 100%;
+        height: 100vh;
+        
+    }
+
+    .right{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top{
+        margin-top: 2%;
+        height: 50%;
+    }
+
+    .bottom{
+        
+        height: 50%;
+    }
+</style>
+<body>
+    <div class="content">
+        <div class="left">
+            <iframe src="poster.html" class="post"></iframe>
+        </div>   
+
+        <div class="right">
+            <iframe src="video.html" class="top"></iframe>
+
+            <iframe src="lyrics.html" class="bottom"></iframe>
+        </div>
+    </div>    
+</body>
+</html>
