@@ -1,0 +1,176 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 21</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+        }
+
+        form {
+            border-radius: 20px;
+            border: 2px solid rgba(128, 128, 128, 0.582);
+            padding: 30px;
+            display: block;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+            background-color:#ffffff34;
+            height: auto;
+            width: 90%;
+            max-width: 400px;
+            margin-top: 2%;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        hr{
+            border: 1px solid #00000042;
+             margin-bottom: 20px;
+        }
+
+
+        input,select,textarea{
+             font-size: 15px;
+            color: #000;
+            background: transparent;
+            border: none;
+            outline: none;
+           border-bottom: #000 1px solid;
+           margin-bottom: 20px;
+           padding: 8px 5px;
+           transition: all ease-in-out 0.3s;
+        }
+
+        .course{
+            display: flex;
+            gap: 20px;
+        }
+
+        textarea{
+            resize: none;
+        }
+
+        .btn{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 5em;
+        }
+
+        button{
+            height: 50px;
+            width:200px;
+            border-radius: 20px;
+            background-color: #000;
+            color: #fff;
+            transition: all ease 0.3s;
+        }
+
+        input:focus{
+            transform: translateY(-5px);
+        }
+
+        button:hover{
+            opacity: 0.80;
+            transform: scale(1.05);
+            transform: translateY(-4px);
+        }
+
+
+
+        @media (max-width:600px){
+
+            body{
+                  align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px 0;
+            }
+            form{
+                width: 95%;
+                padding: 20px;
+            }
+
+            .course{
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn{
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            button{
+                width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="main">
+    
+    <form onsubmit=showmessage()>
+        <h2>Student Registration</h2>
+        <hr>
+        <input type="text" placeholder="Enter your Name" required><br>
+        <input type="tel" placeholder="Enter your mobile number" required><br>
+        <input type="text" placeholder="Enter your email" required><br>
+        <input type="date" required><br>
+        <div class="gender" required>
+            Gender :
+            <label><input type="radio" name="gender">Male</label>
+            <label><input type="radio" name="gender">Female</label>
+        </div>
+
+        <select required>
+            <option selected disabled>Select Blood group</option>
+            <option>A</option>
+            <option>AB</option>
+            <option>B</option>
+            <option>O</option>
+        </select>
+
+        <div class="course" required>
+            Course :
+            <input type="checkbox">C
+            <input type="checkbox">C++
+            <input type="checkbox">Java
+            <input type="checkbox">HTML
+        </div>
+
+        <textarea placeholder="Address"></textarea>
+
+        <div class="btn">
+            <button type="reset">Reset</button>
+             <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        function showmessage()
+         {
+            alert('Registration Completed');
+        }
+    </script>
+    </div>
+</body>
+
+</html>
